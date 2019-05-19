@@ -37,7 +37,7 @@ Our slide deck from that October 2015 conference had a slide saying
  
  * It is not difficult to have rich sets of template operations.
  
- * Continuous program transformations and continuous trajectories inlarge spaces of programs are therefore available.
+ * Continuous program transformations and continuous trajectories in large spaces of programs are therefore available.
  
  * One can evolve programs in continuous fashion.
  
@@ -47,5 +47,18 @@ Our slide deck from that October 2015 conference had a slide saying
 
 
 ## Starting from 2016 - keeping in mind that DMMs are generalized neural nets
+
+Hope to learn readable programs via neural methods (mostly because DMMs can be pretty compact): Secton 4 of https://arxiv.org/abs/1603.09002
+
+Would be nice to have a corpus of programs in a DMM-oriented language for training: Section 4 of https://arxiv.org/abs/1605.05296
+
+Explore training the nets with piecewise bilinear neurons based on ReLU (this is the activation function: g(x, y) = max(0, x)∗max(0, y) ): Section 1.3.2 of https://arxiv.org/abs/1606.09470
+
+DMM-based program synthesis is similar to finding neural net architecture while assembling the network from layers and modules:
+Section 4 of https://arxiv.org/abs/1706.00648 (Section 4 here is generally useful for learning)
+
+### Tension between flexibility and efficiency, and also between gradient-based and derivative-free methods. 
+
+
 
 ## Starting from 2019 - first experiments with training the sparse networks
