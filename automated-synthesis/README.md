@@ -18,7 +18,7 @@ Here I am trying to record DMM-specific aspects, and also the evolution of my th
 
  * DMMs are capable of conveniently editing themselves or other DMMs.
 
-   So the motive of "learning to learn" is very prominent.
+   So the motive of "learning to learn" is very prominent - training the network to train itself better (or to train other networks better).
 
  * DMMs comfortably host populations of "smaller" DMMs within themselves.
 
