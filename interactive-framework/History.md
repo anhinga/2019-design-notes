@@ -52,7 +52,7 @@ Visual experiments were using Quil, a Clojure wrapper around Processing.
 
 July 2017 - first visual experiments with a neuron emitting mouse position and a neuron accumulating a list of mouse clicks: https://github.com/jsa-aerial/DMM/tree/master/examples/dmm/quil-controlled
 
-January-April 2018 - first experiments enabling interactive changes of the running neural network (including the topology of its graph) via text commands (sent from Quil window or from a Seasaw-based editor ("Seesaw turns the Horror of Swing into a friendly, well-documented, Clojure library")). The changes are eventually sent to a dedicated neuron, which listens on a core.async channel. This dedicated neuron can produces updates for the network matrix (the matrix encoding network connectivity and weight) or for other elements of the network: https://github.com/jsa-aerial/DMM/blob/master/examples/dmm/quil-controlled/interactive and Section 1.1 of https://github.com/jsa-aerial/DMM/tree/master/technical-report-2018
+January-April 2018 - first experiments enabling interactive changes of the running neural network (including the topology of its graph) via text commands (sent from Quil window or from a Seasaw-based editor ("Seesaw turns the Horror of Swing into a friendly, well-documented, Clojure library")). The changes are eventually sent to a dedicated neuron, which listens on a core.async channel. This dedicated neuron produces updates for the network matrix (the matrix encoding network connectivity and weight) or for other elements of the network: https://github.com/jsa-aerial/DMM/blob/master/examples/dmm/quil-controlled/interactive and Section 1.1 of https://github.com/jsa-aerial/DMM/tree/master/technical-report-2018
 
 
 
