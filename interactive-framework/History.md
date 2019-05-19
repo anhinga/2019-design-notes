@@ -4,11 +4,11 @@ The field of visual dataflow programming goes decades back and includes such wel
 
 https://en.wikipedia.org/wiki/Visual_programming_language
 
-Our own relevant prototypes for neuromorphic dataflow systems with vector-like flows or their pieces in recent years include
+Our own relevant prototypes for neuromorphic dataflow systems with vector-like flows (or their pieces) in recent years include
 
 ## Project Fluid, in https://github.com/anhinga/fluid 
 
-Programming language: Processing (a simplified Java with awesome visual facilities, populated in the digital artistic community).
+Programming language: Processing (a simplified Java with awesome visual facilities, popular in the digital artistic community).
 
 ### Pre-DMM
 
