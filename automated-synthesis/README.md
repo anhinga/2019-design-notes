@@ -22,5 +22,4 @@ Here I am trying to record DMM-specific aspects, and also the evolution of my th
 
  * DMMs comfortably host populations of "smaller" DMMs within themselves.
 
-   So this is a nice setup for artificial evolution and for self-modifying evolutionary schemes.
-   
+   So this is a nice setup for artificial evolution and for self-modifying evolutionary schemes (note that neuroevolution and the "learning/evolving to evolve better" are becoming popular topics in the field lately). 
