@@ -59,4 +59,10 @@ January-April 2018 - first experiments enabling interactive changes of the runni
 
 ## Python code snippers, in https://github.com/anhinga/2019-python-drafts
 
+My current thinking is that the next version of the DMM engine should probably be in Python, in order to gain access to various well-developed machine learning frameworks (all the best ones seem to be Python-centered, with other languages coming as an afterthought at most), and in order to make it possible for more people to easily work with DMMs.
+
+Some preliminary experiments were done in April 2019, most importantly in interactively editing a directed graph in Dash Cytoscape.
+
+We also made sure that Trio-based websockets work for us (websockets are important when one does not want to implement the whole system as a single monolithic process; they also make it relatively easy to implement interactions between different programming languages). We started preliminary work with VisPy, which is the state-of-the-art OpenGL wrapper in Python (trying to overcome our dependency on Processing).
+
 
