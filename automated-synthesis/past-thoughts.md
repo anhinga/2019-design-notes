@@ -1,6 +1,6 @@
 # Past thoughts summary
 
-Here I am trying to record the evolution of my thinking about DMM synthesis.
+Here I am trying to record the evolution of my thinking about DMM synthesis. Note that while I was doing some conventional machine learning model training (including training of neural nets) in the past, the sketches below are mostly theoretical; the first machine learning experiments which can be said to be somewhat related to DMM specifics were only performed in February 2019.
 
 ## Before 2014
 
@@ -55,7 +55,7 @@ Would be nice to have a corpus of programs in a DMM-oriented language for traini
 Explore training the nets with piecewise bilinear neurons based on ReLU (this is the activation function: g(x, y) = max(0, x)∗max(0, y) ): Section 1.3.2 of https://arxiv.org/abs/1606.09470
 
 DMM-based program synthesis is similar to finding neural net architecture while assembling the network from layers and modules:
-Section 4 of https://arxiv.org/abs/1706.00648 (Section 4 here is generally useful for learning)
+Section 4 of https://arxiv.org/abs/1706.00648 (Section 4 in this preprint is generally useful for learning)
 
 ### Tension between flexibility and efficiency, and also between gradient-based and derivative-free methods. 
 
