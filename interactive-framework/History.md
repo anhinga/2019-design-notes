@@ -34,7 +34,7 @@ In these cases, the dataflow program modifies itself by changing its own network
 
 August 2016 in `Lightweight_Pure_DMMs` directory of Project Fluid - first self-modifying Lightweight pure DMMs.
 
-June 2018 in `atparty-2018/game_of_afterlife` directory of Project Fluid - self-modifying Lightweight pure DMMs producing interesting emerging phenomena. The last of experiments in this series also drived audio output.
+June 2018 in `atparty-2018/game_of_afterlife` directory of Project Fluid - self-modifying Lightweight pure DMMs producing interesting emerging phenomena. The last of experiments in this series also drives audio output.
 
 June-September 2018 in `Lightweight_Evolutionary` directory of Project Fluid - first experiments with interactive evolution of a small population of Lightweight pure DMMs.
 
