@@ -2,11 +2,17 @@
 
 Here I am trying to record the evolution of my thinking about DMM synthesis.
 
-## Before 2016 - not thinking about them as neural nets (only thinking about them as continuously deformable programs)
+## Before 2014
 
-Programs are genes. (Or existence of a link in a network is a gene.)
+Let's try to figure our how to create continuously deformable programs.
 
-Coefficients in the linear combinations of programs (or weights on links) are expressions of those genes.
+If we can do that, it is highly likely that it will be much easier to synthesize them, than discrete programs.
+
+## Before 2016 - not thinking about DMMs as neural nets (only thinking about them as continuously deformable programs)
+
+Programs are genes. (Or existence of a link in a DMM network is a gene.)
+
+Coefficients in the linear combinations of programs (or weights on links) are degrees of "gene expression" of those genes.
 
 So, in the context of artificial evolution, working with linear streams allows to incorporate gene expression into evolutionary programming (Section 1 of our Fall 2015 https://easychair.org/publications/paper/Q4lW). 
 
@@ -21,7 +27,7 @@ automated generation of test suites for software systems.
 Another hybrid approach involves the use of small inflexible components inside the flexible “tissue”
 of linear models." 
 
-DMMS had effectively became examples of that architecture, with activations functions playing the role of inflexible components in the flexible tissue.
+DMMs had effectively became an example of hybrid architecture, with activations functions playing the role of inflexible components in the flexible tissue.
 
 Our slide deck from that October 2015 conference had a slide saying
 
