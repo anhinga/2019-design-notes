@@ -57,7 +57,7 @@ January-April 2018 - first experiments enabling interactive changes of the runni
 
 
 
-## Python code snippers, in https://github.com/anhinga/2019-python-drafts
+## Python code drafts, in https://github.com/anhinga/2019-python-drafts
 
 My current thinking is that the next version of the DMM engine should probably be in Python, in order to gain access to various well-developed machine learning frameworks (all the best ones seem to be Python-centered, with other languages coming as an afterthought at most), and also in order to make it possible for more people to easily work with DMMs.
 
@@ -67,6 +67,6 @@ Most importantly I experimented with interactively editing a directed graph in D
 
 The key thing which was missing so far was a controller allowing to graphically edit the dataflow graph while the network is running (the best we were able to do so far was to send textual edit commands via a channel to the running network). Instead we would like to generate appropriate textual commands or function calls from interactive graph edits eventually. We might decide to do it via Dash Cytoscape, or via other means (but Dash Cytoscape is a very good candidate).
 
-We also made sure that Trio-based websockets work for us (websockets are important when one does not want to implement the whole system as a single monolithic process; they also make it relatively easy to implement interactions between different programming languages). I started preliminary work with VisPy, which is the state-of-the-art OpenGL wrapper in Python (trying to overcome our dependency on Processing).
+We also made sure that Trio-based websockets work for us (websockets are important when one does not want to implement the whole system as a single monolithic process; they also make it relatively easy to implement interactions between different programming languages, if one so desires). I started preliminary work with VisPy, which is the state-of-the-art OpenGL wrapper in Python (trying to overcome our dependency on Processing).
 
 
