@@ -42,6 +42,21 @@ September 2018 in https://github.com/anhinga/fluid_drafts - external movies are 
 
 ## DMM project, in https://github.com/jsa-aerial/DMM
 
+Programming language: Clojure (an ultramodern JVM-based Lisp, a very nice language friendly towards programming with immitable structures)
+
+Dataflow matrix machines based on streams of V-values, as described in our paper, "Dataflow Matrix Machines and V-values: a Bridge between Programs and Neural Nets", https://arxiv.org/abs/1712.07447
+
+This is our main "professional" DMM engine (although it is very experimental).
+
+Visual experiments were using Quil, a Clojure wrapper around Processing.
+
+July 2017 - first visual experiments with a neuron emitting mouse position and a neuron accumulating a list of mouse clicks: https://github.com/jsa-aerial/DMM/tree/master/examples/dmm/quil-controlled
+
+January-April 2018 - first experiments enabling interactive changes of the running neural network (including the topology of its graph) via text commands (sent from Quil window or from a Seasaw-based editor ("Seesaw turns the Horror of Swing into a friendly, well-documented, Clojure library")). The changes are eventually sent to a dedicated neuron, which listens on a core.async channel. This dedicated neuron can produces updates for the network matrix (the matrix encoding network connectivity and weight) or for other elements of the network: https://github.com/jsa-aerial/DMM/blob/master/examples/dmm/quil-controlled/interactive and Section 1.1 of https://github.com/jsa-aerial/DMM/tree/master/technical-report-2018
+
+
+
+
 ## Python code snippers, in https://github.com/anhinga/2019-python-drafts
 
 
