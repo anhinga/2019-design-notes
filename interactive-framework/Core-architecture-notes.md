@@ -46,3 +46,18 @@ In some sense, there is a lot of good material in pre-DMM formalism ( https://ar
 
 One of the purposes of the next implementation is to assemble all those good pieces together, including ones from the pre-DMM epoch.
 
+### Internalization
+
+The key principle we are trying to follow is that the edits should be done by triggering appropriate neurons.
+
+We actually want to extend this principle further and think about controllers as neurons or subgraphs. It requires some extra thinking to do it this way, but it's really helpful in many respects. The most important difference between DMMs and neural nets is that one can really program in DMMs, and it is not difficult to express handcrafted controllers as DMMs (subnetworks), or at least to wrap activation functions around them. 
+
+If we can build "graph edit controller" and "graph visualizer" in this fashion, then we should be able to build other controllers which tend to be much simpler than "graph-related controllers".
+
+## Design graph edit controller first
+
+Since we don't yet have any idea for the top-down design of the whole system, let's try to design graph edit controller and graph visualizer first, taking into account the preliminary snippets above, especially the snippet about **internalization**.
+
+We want the controller to be a part of the DMM in question, just like the network graph expressed as a matrix is a part of a typical DMM and the visualization of that graph is included into one of our pre-DMM architectures (and it is inside the dataflow program there as well, not something outside and external).
+
+This might be a good starting point (and if we can do that, it should be able to guide the rest of the design).
