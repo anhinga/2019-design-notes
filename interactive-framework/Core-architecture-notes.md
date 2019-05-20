@@ -1,4 +1,4 @@
-# Architecture notes (in progress)
+# Architecture notes (preliminary introduction)
 
 I don't have a ready final architecture in my mind, which just needs to be written. The [History.md](History.md) gives me some ideas and some warnings about potential problems.
 
@@ -61,3 +61,5 @@ Since we don't yet have any idea for the top-down design of the whole system, le
 We want the controller to be a part of the DMM in question, just like the network graph expressed as a matrix is a part of a typical DMM and the visualization of that graph is included into one of our pre-DMM architectures (and it is inside the dataflow program there as well, not something outside and external).
 
 This might be a good starting point (and if we can do that, it should be able to guide the rest of the design).
+
+We'll try to do it here: [Attempt-graph-edit-controller-design.md](Attempt-graph-edit-controller-design.md)
