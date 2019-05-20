@@ -20,7 +20,7 @@ The exact interplay of graph and matrix representations also requires further th
 
 ### Various kinds of streamed objects
 
-We were always able to stick to one kind of streamed objects in our experiments. First, these were fixed-resolution images (in the pre-DMM experiments), then numbers (in early DMMs), then network-sized matrices (in Lightweight pure DMMs), then finally V-values (and V-values are universal enough to allow to embed any reasonable streams of objects into streams of appropriately crafted V-values (Section 5.3 of https://arxiv.org/abs/1712.07447 ).
+We were always able to stick to one kind of streamed objects in our experiments. First, these were fixed-resolution images (in the pre-DMM experiments), then numbers (in early DMMs), then network-sized matrices (in Lightweight pure DMMs), then finally V-values (and V-values are universal enough to allow to embed any reasonable streams of objects into streams of appropriately crafted V-values (Section 5.3 of https://arxiv.org/abs/1712.07447 )).
 
 However, in principle, nothing precludes having different kinds of streams in a DMM (Section 3 of https://arxiv.org/abs/1605.05296 ). And I really want to avoid making a decision to stick to a particular kind of streams at this point, even if that kind is sufficiently universal.
 
