@@ -36,7 +36,7 @@ In any case, it is the system responsibility to represent a task which it wants 
 
 ### Two-stroke engine
 
-The two-stroke engine remains as before. As noted in Section 6.4 of https://arxiv.org/abs/1712.07447 pre-DMM experiments involve a shift stage following the application of activation function stage on each engine cycle, and this pattern (typical for programs written in the dataflow formalism manually) corresponds to taking a linear combination with one non-zero summands with coefficient 1. The shift stage happens anyway, so it is convenient when it is always understood as a linear combination (regardless of implementation details, which might vary).
+The two-stroke engine remains as before. As noted in Section 6.4 of https://arxiv.org/abs/1712.07447 pre-DMM experiments involve a shift stage following the application of activation function stage on each engine cycle, and this pattern (typical for programs written in the dataflow formalism manually) corresponds to taking a linear combination with one non-zero summand with coefficient 1. The shift stage happens anyway, so it is convenient when it is always understood as a linear combination (regardless of implementation details, which might vary).
 
 ### Copying subgraphs
 
