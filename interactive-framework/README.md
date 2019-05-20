@@ -24,7 +24,9 @@ The requirement for the **core** of the interactive system is the ability to flu
 
 Core design and implementation should be done so as to make the following Stage 2 possible without drastic breaking changes.
 
-For the **Architecture notes (in progress)** see [Core-architecture-notes.md](Core-architecture-notes.md)
+For the **Architecture notes (preliminary introduction)** see [Core-architecture-notes.md](Core-architecture-notes.md)
+
+(The design for the Core (stage 1) is currently work in progress.)
 
 ## Extensions (stage 2)
 
