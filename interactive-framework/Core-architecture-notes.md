@@ -33,3 +33,9 @@ So we might have to say that gradient-based methods and GPU-capable runs would o
 This is not set in stone - the introduction of Class of legal streamable objects does not preclude us from imposing further discipline, if we feel like it. In particular, here the demand to be able to do Stage 2 without drastic breaking changes comes into play. We'll need to consider what's compatible with a nice Stage 2 implementation (in particular, our decisions here must be compatible with the ability to interface with sparse matrix-based models from something like PyTorch and to use those models for learning this kind of machines).
 
 In any case, it is the system responsibility to represent a task which it wants something like **pytorch-sparse** with its autograd and GPU-capability to handle in the appropriate shape. So the system would need to be aware of the subclass of problems which can be so represented. (For a more general solution, if one is not too concerned about speed, e.g. when a paticular problem is small, a hand-crafted module for **evolution strategies without parallelization (ouch, that is really slow)** is always feasible to implement.)
+
+### Two-stroke engine
+
+The two-stroke engine remains as before. As noted in Section 6.4 of https://arxiv.org/abs/1712.07447 pre-DMM experiments involve a shift stage following the application of activation function stage on each engine cycle, and this pattern (typical for programs written in the dataflow formalism manually) corresponds to taking a linear combination with one non-zero summands with coefficient 1. The shift stage happens anyway, so it is convenient when it is always understood as a linear combination (regardless of implementation details, which might vary).
+
+
