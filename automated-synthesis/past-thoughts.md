@@ -52,6 +52,8 @@ Hope to learn readable programs via neural methods (mostly because DMMs can be p
 
 Would be nice to have a corpus of programs in a DMM-oriented language for training: Section 4 of https://arxiv.org/abs/1605.05296
 
+'We envision having a sufficient collection of types of neurons capable of editing the (network matrix) to easily express the edits doable via the interactive high-level language mentioned above. We think about this informally as “self-referential completeness of the DMM signature relative to the language available to describe and edit the DMMs"': Section 1.6 of https://arxiv.org/abs/1605.05296 (this is important, if one wants to teach the network to edit itself meaningfully)
+
 Explore training the nets with piecewise bilinear neurons based on ReLU (this is the activation function: g(x, y) = max(0, x)∗max(0, y) ): Section 1.3.2 of https://arxiv.org/abs/1606.09470
 
 DMM-based program synthesis is similar to finding neural net architecture while assembling the network from layers and modules:
@@ -67,3 +69,17 @@ However, with the progress of autograd and GPU methods for sparse matrices, a co
 
 
 ## Starting from 2019 - first experiments with training the sparse networks
+
+I conducted this series of experiments in February-March 2019:
+
+https://github.com/anhinga/synapses/blob/master/regularization.md
+
+Normally, one does all kinds of strange tricks to achieve sparseness of resulting neural nets (L_1 regularization is the most well known way of doing so, but there are other techniques as well).
+
+The simple neuroevolutionary schema invented by Mocanu et al. allows to keep the connectivity pattern sparse at all times and to weed out the non-performing links replacing them with new candidate links.
+
+If one views the links as genes, and the round of conventional training computing weights as figuring out the optimial gene expression, there is interesting interplay with our thoughts in Section 1 of our Fall 2015 https://easychair.org/publications/paper/Q4lW mentioned above.
+
+In any case, this schema by Mocano et al. is likely to be quite useful for DMM synthesis.
+
+
