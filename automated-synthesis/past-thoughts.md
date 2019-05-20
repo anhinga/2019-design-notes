@@ -78,7 +78,7 @@ Normally, one does all kinds of strange tricks to achieve sparseness of resultin
 
 The simple neuroevolutionary schema invented by Mocanu et al. allows to keep the connectivity pattern sparse at all times and to weed out the non-performing links replacing them with new candidate links.
 
-If one views the links as genes, and the round of conventional training computing weights as figuring out the optimial gene expression, there is interesting interplay with our thoughts in Section 1 of our Fall 2015 https://easychair.org/publications/paper/Q4lW mentioned above.
+If one views the links as genes, and the round of conventional training computing weights as figuring out the optimial gene expression, there is interesting interplay with our thoughts in Section 1 of our Fall 2015 https://easychair.org/publications/paper/Q4lW mentioned above. Of course, the fitness criterion is very simple here (if gene expression is low, then this gene is unnecessary), and the production of new genes is very simple minded (any possible new gene is equally likely to be created). The evolving population here is a population of single genes (here, genes = links between neurons), not of the networks.
 
 In any case, this schema by Mocanu et al. is likely to be quite useful for DMM synthesis. That's what's prompted me to study it experimentally in February-March 2019.
 
