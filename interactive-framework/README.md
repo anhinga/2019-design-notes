@@ -24,6 +24,8 @@ The requirement for the **core** of the interactive system is the ability to flu
 
 Core design and implementation should be done so as to make the following Stage 2 possible without drastic breaking changes.
 
+For the **Architecture notes (in progress)** see [Core-architecture-notes.md](Core-architecture-notes.md)
+
 ## Extensions (stage 2)
 
 The requirements for extensions include the ability to handle various types of input and output sources: images, video, camera feeds, audio, text, EEG streams, etc. In particular, one needs to be able to receive streams of **deltas** for the parameters of the system from machine learning modules. These deltas are to be treated by the system as suggestions for parameter changes, and the actual system might take such a suggestion or a linear combination of one or several such suggestions and apply them, or it might use those suggestions in any other way it sees fit (the experimental setup should allow us to experiment with this).
