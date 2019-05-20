@@ -38,4 +38,11 @@ In any case, it is the system responsibility to represent a task which it wants 
 
 The two-stroke engine remains as before. As noted in Section 6.4 of https://arxiv.org/abs/1712.07447 pre-DMM experiments involve a shift stage following the application of activation function stage on each engine cycle, and this pattern (typical for programs written in the dataflow formalism manually) corresponds to taking a linear combination with one non-zero summands with coefficient 1. The shift stage happens anyway, so it is convenient when it is always understood as a linear combination (regardless of implementation details, which might vary).
 
+### Copying subgraphs
+
+The idea of typically building a program by mostly copying the template subgraphs, creating new, more compicated templates, and slightly tweaking the resulting graph and its connections is cool (see Section 4 of https://arxiv.org/abs/1601.00713 ).
+
+In some sense, there is a lot of good material in pre-DMM formalism ( https://arxiv.org/abs/1601.00713 and May-June 2015 experiments), which we did not have a chance to put in practice (although we have the formulas for copying subgraph in the DMM-based matrix formalism, see Section 4 of https://arxiv.org/abs/1606.09470 ; but we don't have any of this in DMM software produced in 2016-2018).
+
+One of the purposes of the next implementation is to assemble all those good pieces together, including ones from the pre-DMM epoch.
 
