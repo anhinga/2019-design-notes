@@ -6,7 +6,7 @@ Here I am trying to record the evolution of my thinking about DMM synthesis. Not
 
 Let's try to figure our how to create continuously deformable programs.
 
-If we can do that, it is highly likely that it will be much easier to synthesize them, than discrete programs.
+If we can do that, it is highly likely that it will be much easier to synthesize them, than to synthesize discrete programs.
 
 ## Before 2016 - not thinking about DMMs as neural nets (only thinking about them as continuously deformable programs)
 
@@ -48,7 +48,7 @@ Our slide deck from that October 2015 conference had a slide saying
 
 ## Starting from 2016 - keeping in mind that DMMs are generalized neural nets
 
-Hope to learn readable programs via neural methods (mostly because DMMs can be pretty compact): Secton 4 of https://arxiv.org/abs/1603.09002
+Hope to learn readable programs via neural methods (mostly because DMMs can be pretty compact): Section 4 of https://arxiv.org/abs/1603.09002
 
 Would be nice to have a corpus of programs in a DMM-oriented language for training: Section 4 of https://arxiv.org/abs/1605.05296
 
