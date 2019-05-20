@@ -13,3 +13,11 @@ Also I started to conduct some relevant experiments under
 https://github.com/anhinga/2019-python-drafts
 
 Here we'll try to sketch how the overall framework of this kind should look (from the user viewpoint and from the viewpoint of software architecture).
+
+## History
+
+[History.md](History.md) describes own relevant prototypes for neuromorphic dataflow systems with vector-like flows (or their pieces) in recent years. 
+
+## Core
+
+## Extensions
