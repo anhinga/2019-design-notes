@@ -57,8 +57,13 @@ Explore training the nets with piecewise bilinear neurons based on ReLU (this is
 DMM-based program synthesis is similar to finding neural net architecture while assembling the network from layers and modules:
 Section 4 of https://arxiv.org/abs/1706.00648 (Section 4 in this preprint is generally useful for learning)
 
-### Tension between flexibility and efficiency, and also between gradient-based and derivative-free methods. 
+### Tension between flexibility and efficiency, and also between derivative-free methods and gradient-based methods. 
 
+DMMs with V-values are very flexible. But this comes with a price: the parallelization is not-trivial, especially if one is looking forward towards using GPUs and such. Also standard autograd packages usually don't work well with this level of flexibility in tensors (they typically want tensors of fixed rank, and they've only recently started to work reasonably well with sparse tensors at all).
+
+So, until one makes better progress towards parallelization and autograd for most flexible DMMs schemas involving V-values (vectors with tree-shaped structure of indices), using them comes with efficienct costs and also pushes one towards derivative-free methods (e.g. the flavor of "evolution strategies" introduced by OpenAI a couple of years ago: https://openai.com/blog/evolution-strategies/ or the schema we were sketching on paper in the last couple of years: https://github.com/jsa-aerial/DMM/blob/master/design-notes/Early-2017/population-coordinate-descent.md and Section 4 of https://github.com/jsa-aerial/DMM/tree/master/technical-report-2018 )
+
+However, with the progress of autograd and GPU methods for sparse matrices, a compromise became possible: one can reshape indexes into appropriate one and two-dimensional structures and back, and the main irregularity one still needs to deal with is sparseness of vectors and matrices in question, which is much more feasible to deal with using available tools in some of the existing machine learning frameworks.
 
 
 ## Starting from 2019 - first experiments with training the sparse networks
