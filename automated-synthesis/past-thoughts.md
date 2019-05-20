@@ -74,12 +74,11 @@ I conducted this series of experiments in February-March 2019:
 
 https://github.com/anhinga/synapses/blob/master/regularization.md
 
-Normally, one does all kinds of strange tricks to achieve sparseness of resulting neural nets (L_1 regularization is the most well known way of doing so, but there are other techniques as well).
+Normally, one does all kinds of strange tricks to achieve sparseness of resulting neural nets while dealing with dense nets during training (L_1 regularization is the most well known way of doing so, but there are other techniques as well).
 
 The simple neuroevolutionary schema invented by Mocanu et al. allows to keep the connectivity pattern sparse at all times and to weed out the non-performing links replacing them with new candidate links.
 
 If one views the links as genes, and the round of conventional training computing weights as figuring out the optimial gene expression, there is interesting interplay with our thoughts in Section 1 of our Fall 2015 https://easychair.org/publications/paper/Q4lW mentioned above.
 
-In any case, this schema by Mocano et al. is likely to be quite useful for DMM synthesis.
-
+In any case, this schema by Mocanu et al. is likely to be quite useful for DMM synthesis. That's what's prompted me to study it experimentally in February-March 2019.
 
