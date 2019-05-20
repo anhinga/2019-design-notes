@@ -30,4 +30,4 @@ This is obviously too flexible for taking nice derivatives or for GPU execution.
 
 So we might have to say that gradient-based methods and GPU-capable runs would only happen for certain types of networks or subnetworks, and that the completely general runs must stick to derivative-free optimization methods and to CPU not-too-optimized execution for the time being.
 
-This is not set in stone - the introduction of Class of legal streamable objects does not preclude us from imposing further discipline, if we feel like it.
+This is not set in stone - the introduction of Class of legal streamable objects does not preclude us from imposing further discipline, if we feel like it. In particular, here the demand to be able to do Stage 2 without drastic breaking changes comes into play. We'll need to consider what's compatible with a nice Stage 2 implementation (in particular, our decisions here must be compatible with the ability to interface with sparse matrix-based models from something like PyTorch and to use those models for learning this kind of machines).
