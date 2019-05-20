@@ -61,6 +61,8 @@ January-April 2018 - first experiments enabling interactive changes of the runni
 
 My current thinking is that the next version of the DMM engine should probably be in Python, in order to gain access to various well-developed machine learning frameworks (all the best ones seem to be Python-centered, with other languages coming as an afterthought at most), and also in order to make it possible for more people to easily work with DMMs.
 
+(I hope for multilingual programming language support for DMMs in the future, but not having Python in the portfolio definitely feels wrong.)
+
 Some preliminary experiments were done in April 2019.
 
 Most importantly I experimented with interactively editing a directed graph in Dash Cytoscape. 
