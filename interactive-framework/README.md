@@ -26,7 +26,7 @@ Core design and implementation should be done so as to make the following Stage 
 
 ## Extensions (stage 2)
 
-The requirements for extensions include the ability to handle various types of input and output sources: images, video, camera feeds, audio, text, EEG streams, etc. In particular, one needs to be able to receive **deltas** for the parameters of the system from machine learning modules. These deltas are to be treated by the system as suggestions for parameter changes, and the actual system might take a linear combination of such suggestions and apply them, or to use those suggestions in any other way it sees fit (the experimental setup should allow us to experiment with this).
+The requirements for extensions include the ability to handle various types of input and output sources: images, video, camera feeds, audio, text, EEG streams, etc. In particular, one needs to be able to receive streams of **deltas** for the parameters of the system from machine learning modules. These deltas are to be treated by the system as suggestions for parameter changes, and the actual system might take such a suggestion or a linear combination of one or several such suggestions and apply them, or it might use those suggestions in any other way it sees fit (the experimental setup should allow us to experiment with this).
 
 One should be able to handle a population of DMMs which work simultaneously in the same substrate, and might interact between themselves (or not). One should be able to create and manage checkpoints, so that one can backtrack to certain state and, perhaps, resume evolution in a different directions.
 
