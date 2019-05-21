@@ -70,7 +70,7 @@ Moreover, I can easily see splitting the viewers and controllers to separate pro
 
  * The model part will be guided by this thinking: https://github.com/anhinga/2019-design-notes/blob/master/automated-synthesis/flattening-of-v-values.md
  
- * There can be multiple viewers and controllers, and some of them can be pretty ad hoc (in the style of https://github.com/jsa-aerial/DMM/tree/master/examples/dmm/quil-controlled/interactive in 2018), but we would like to also design something more systematic (that's where our thoughts about "graph editor controller" fit, and here one would also want/need to control what one sees)
+ * There can be multiple viewers and controllers, and some of them can be pretty ad hoc (in the style of https://github.com/jsa-aerial/DMM/tree/master/examples/dmm/quil-controlled/interactive experiments in 2018), but we would like to also design something more systematic (that's where our thoughts about "graph editor controller" fit, and here one would also want/need to control what one sees, and how one sees it)
  
  * So far we were using ad hoc practice of controlling the model (the DMM) by the graphical framework frame rate. This was convenient in many respects, but it does interfere with model-viewer separation. This is something to ponder.
  
