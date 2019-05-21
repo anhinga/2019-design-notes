@@ -60,8 +60,17 @@ If we can build "graph edit controller" and "graph visualizer" in this fashion, 
 
 ### Second thoughts about internalization
 
-Looking back at our practices at various projects in 2015-2018, I think it is better at this stage to achieve a more clean separation between model (DMM), views into that model, and controllers, allowing to influence the model. As usual, controllers are often based on pieces of views, and there will be DMM neurons responsible for handling V-values received from software.
+Looking back at our practices at various projects in 2015-2018, I think it is better at this stage to achieve a more clean separation between model (DMM), views into that model, and controllers, allowing to influence the model. As usual, controllers are often based on pieces of views, and there will be DMM neurons responsible for handling V-values received from "local software" interfacing with controller software (our experience is that this usually ends up being a two-stager - controller implementation is using some external framework, and this framework dictates how the event information should be locally received, and then the local software sends an async V-value into a listening neuron).
 
 So, I think, we are leaning towards adapting the ways this is currently handled in our Clojure experiments, e.g. https://github.com/jsa-aerial/DMM/blob/master/examples/dmm/quil-controlled/jul_13_2017_experiment.clj
 
-Moreover, I can easily see splitting the viewers and controllers to separate processes connected via something like Websockets (we were leaning towards this recently in the context of https://github.com/jsa-aerial/DMM/tree/master/examples/dmm/quil-controlled/interactive although we never implemented it that way.
+Moreover, I can easily see splitting the viewers and controllers to separate processes connected via something like Websockets (we were leaning towards this recently in the context of https://github.com/jsa-aerial/DMM/tree/master/examples/dmm/quil-controlled/interactive although we never implemented it that way).
+
+## Let's assume (without commitment) that this is a model-view-controller architecture
+
+ * The model part will be guided by this thinking: https://github.com/anhinga/2019-design-notes/blob/master/automated-synthesis/flattening-of-v-values.md
+ 
+ * There can be multiple viewers and controllers, and some of them can be pretty ad hoc (in the style of https://github.com/jsa-aerial/DMM/tree/master/examples/dmm/quil-controlled/interactive in 2018), but we would like to also design something more systematic (that's where our thoughts about "graph editor controller" fit, and here one would also want/need to control what one sees)
+ 
+ * So far we were using ad hoc practice of controlling the model (the DMM) by the graphical framework frame rate. This was convenient in many respects, but it does interfere with model-viewer separation. This is something to ponder.
+ 
