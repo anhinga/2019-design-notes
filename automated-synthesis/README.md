@@ -28,3 +28,7 @@ Here I am trying to record DMM-specific aspects, and also the evolution of my th
 ## Past thoughts summary
 
 Overviewing the evolution of my thinking about DMM synthesis: [past-thoughts.md](past-thoughts.md)
+
+## Flattening and reshaping of V-values
+
+Flattening and reshaping of V-values for the purpose of being able to apply standard machine learning software tools, and also for the purpose of being able to construct flattened visualizations: [flattening-of-v-values.md](flattening-of-v-values.md)
