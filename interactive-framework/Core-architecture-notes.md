@@ -58,12 +58,10 @@ We actually want to extend this principle further and think about controllers as
 
 If we can build "graph edit controller" and "graph visualizer" in this fashion, then we should be able to build other controllers which tend to be much simpler than "graph-related controllers".
 
-## Design graph edit controller first
+### Second thoughts about internalization
 
-Since we don't yet have any idea for the top-down design of the whole system, let's try to design graph edit controller and graph visualizer first, taking into account the preliminary snippets above, especially the snippet about **internalization**.
+Looking back at our practices at various projects in 2015-2018, I think it is better at this stage to achieve a more clean separation between model (DMM), views into that model, and controllers, allowing to influence the model. As usual, controllers are often based on pieces of views, and there will be DMM neurons responsible for handling V-values received from software.
 
-We want the controller to be a part of the DMM in question, just like the network graph expressed as a matrix is a part of a typical DMM and the visualization of that graph is included into one of our pre-DMM architectures (and it is inside the dataflow program there as well, not something outside and external).
+So, I think, we are leaning towards adapting the ways this is currently handled in our Clojure experiments, e.g. https://github.com/jsa-aerial/DMM/blob/master/examples/dmm/quil-controlled/jul_13_2017_experiment.clj
 
-This might be a good starting point (and if we can do that, it should be able to guide the rest of the design).
-
-We'll try to do it here: [Attempt-graph-edit-controller-design.md](Attempt-graph-edit-controller-design.md)
+Moreover, I can easily see splitting the viewers and controllers to separate processes connected via something like Websockets (we were leaning towards this recently in the context of https://github.com/jsa-aerial/DMM/tree/master/examples/dmm/quil-controlled/interactive although we never implemented it that way.
