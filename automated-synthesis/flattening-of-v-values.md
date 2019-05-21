@@ -24,6 +24,8 @@ We will need to provide custom reshaping maps from 1D-arrays to 2D-matrices (sin
 
 ## Extended V-values
 
-For V-values with extended leaf structure (Section 5.3 of https://arxiv.org/abs/1712.07447 ), one should probably consider the structure containing the arrays with elements taylored for each kind of linear streams involved in the particular construction (See Section 5.3 of that paper for details: so, instead of keeping one tree with combined leaves, we transform to separete trees, one tree for each kind of leaves, and then flatten those).
+For V-values with extended leaf structure (Section 5.3 of https://arxiv.org/abs/1712.07447 ), one should probably consider the structure containing the arrays with elements taylored for each kind of linear streams involved in the particular construction (See Section 5.3 of that paper for details: so, instead of keeping one tree with combined leaves, we make separate trees, one tree for each kind of leaves, and then flatten those).
 
+---
 
+This seems to be the right direction, in terms of starting to do machine learning applications.
