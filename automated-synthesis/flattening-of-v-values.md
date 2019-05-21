@@ -18,9 +18,12 @@ Also a similar bidirectional translation for matrix rows and another one for mat
 
 One needs to think about reshaping bidirectional translations (or extending the sizes of relevant arrays/matrices). In the initial versions, we'll just reserve sufficient space to avoid this issue.
 
-(Also, implementation-wise, while the natural framework here is sparse matrices and sparse arrays, `jsa-aerial` noted that one can just start with ordinary matrices and arrays storing all those zeros for initial experiments.)
+We will need to provide custom reshaping maps from 1D-arrays to 2D-matrices (since among our 1D arrays we would have data which we'll need to use as network matrices).
+
+(Note: implementation-wise the natural framework here is sparse matrices and sparse arrays; however `jsa-aerial` noted that one can just start with ordinary matrices and arrays storing all those zeros for initial experiments, and transition to sparse matrices later on.)
 
 ## Extended V-values
 
 For V-values with extended leaf structure (Section 5.3 of https://arxiv.org/abs/1712.07447 ), one should probably consider the structure containing the arrays with elements taylored for each kind of linear streams involved in the particular construction (See Section 5.3 of that paper for details: so, instead of keeping one tree with combined leaves, we transform to separete trees, one tree for each kind of leaves, and then flatten those).
+
 
