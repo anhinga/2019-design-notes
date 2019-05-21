@@ -6,11 +6,11 @@ In order to apply standard tools from machine learning frameworks, one should ha
 
 A vector of sparse vectors is a sparse matrix, so applying a sparse matrix to a vector of sparse vectors is simply a sparse matrix multiplication.
 
-In this paradigm, various standard autograd tools and compilation to GPU/TPU are expected to more or less work now (although until quite recently doing this well for the sparse case was a problem; but the situation is improving in thise sense).
+In this paradigm, various standard autograd tools and compilation to GPU/TPU are expected to more or less work now (although until quite recently doing this well for the sparse case was a problem; but the situation is improving in this sense).
 
 ## Plain V-values
 
-The leaves are now not real numbers, but indices into one-dimentional arraw of numbers (or, when necessary, row and column indices of a matrix).
+The leaves are now not real numbers, but indices into one-dimensional array of numbers (or, when necessary, row and column indices of a matrix).
 
 One only needs to maintain a single tree providing translations from tree paths to indices of a one-dimensional array. One would also like to have a one-dimensional array of tree paths providing the inverse translation.
 
