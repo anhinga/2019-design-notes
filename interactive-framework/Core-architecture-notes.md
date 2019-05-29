@@ -66,6 +66,8 @@ So, I think, we are leaning towards adapting the ways this is currently handled 
 
 Moreover, I can easily see splitting the viewers and controllers to separate processes connected via something like Websockets (we were leaning towards this recently in the context of https://github.com/jsa-aerial/DMM/tree/master/examples/dmm/quil-controlled/interactive although we never implemented it that way).
 
+(Note: so, at least at first, I consider internalization to be limited to the following requirement: editing updates (or suggestions for those updates) are effected by triggering specially crafted **update neurons**; this is still a must. But the editing system does not have to be represented as a DMM (and we only expect editing systems represented by a DMM to appear at later stages).)
+
 ## Let's assume (without commitment) that this is a model-view-controller architecture
 
  * The model part will be guided by this thinking: https://github.com/anhinga/2019-design-notes/blob/master/automated-synthesis/flattening-of-v-values.md
