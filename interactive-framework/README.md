@@ -34,6 +34,8 @@ The requirements for extensions include the ability to handle various types of i
 
 One should be able to handle a population of DMMs which work simultaneously in the same substrate, and might interact between themselves (or not). One should be able to create and manage checkpoints, so that one can backtrack to certain state and, perhaps, resume evolution in a different direction. Random numbers generation and logging should be made in such a fashion as to make the runs reproducible.
 
+(Note that our architecture allows to express the network update as linear combination of various learning suggestions, various manual editing suggestions, and any internal update dynamics the system might have. There can be various ways to control coefficients in that linear combination, starting with purely manual control.)
+
 ## Optional extensions (stage 3)
 
 These extensions are not a must. It's OK to have an implementation of Stages 1 and 2 not taking this into account at all.
