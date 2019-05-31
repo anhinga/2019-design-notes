@@ -18,6 +18,8 @@ Here we'll try to sketch how the overall framework of this kind should look (fro
 
 [History.md](History.md) describes own relevant prototypes for neuromorphic dataflow systems with vector-like flows (or their pieces) in recent years. 
 
+## Sketches
+
 For the **Architecture notes (preliminary introduction)** see [Preliminary-architecture-notes.md](Preliminary-architecture-notes.md)
 
 ## Core (stage 1)
@@ -25,8 +27,6 @@ For the **Architecture notes (preliminary introduction)** see [Preliminary-archi
 The requirement for the **core** of the interactive system is the ability to fluently perform various experiments (e.g. in the style of visiual synthesis demonstrated in May and June 2015) by using visual programming and, more specifically, **interactive visual livecoding**. In particular, one should be able to visualize the changing network topology as a graph, and to edit the network both via a **"graph editor controller"**, and by sending textual commands. It should be possible to control numbers by sliders. There should be some further bare-bones infrastructure (including the ability to interactively adjust the frame rate, or pause/resume).
 
 Core design and implementation should be done so as to make the following Stage 2 possible without drastic breaking changes.
-
-For the **Architecture notes (preliminary introduction)** see [Core-architecture-notes.md](Core-architecture-notes.md)
 
 (The design for the Core (stage 1) is currently work in progress.)
 
