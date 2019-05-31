@@ -68,7 +68,7 @@ If we can build "graph edit controller" and "graph visualizer" in this fashion, 
 
 Looking back at our practices at various projects in 2015-2018, I think it is better at this stage to achieve a more clean separation between model (DMM), views into that model, and controllers, allowing to influence the model. As usual, controllers are often based on pieces of views, and there will be DMM neurons responsible for handling V-values received from "local software" interfacing with controller software (our experience is that this usually ends up being a two-stager - controller implementation is using some external framework, and this framework dictates how the event information should be locally received, and then the local software sends an async V-value into a listening neuron).
 
-So, I think, we are leaning towards adapting the ways this is currently handled in our Clojure experiments, e.g. https://github.com/jsa-aerial/DMM/blob/master/examples/dmm/quil-controlled/jul_13_2017_experiment.clj
+So, I think, we are leaning towards adopting the ways this is currently handled in our Clojure experiments, e.g. https://github.com/jsa-aerial/DMM/blob/master/examples/dmm/quil-controlled/jul_13_2017_experiment.clj
 
 Moreover, I can easily see splitting the viewers and controllers to separate processes connected via something like Websockets (we were leaning towards this recently in the context of https://github.com/jsa-aerial/DMM/tree/master/examples/dmm/quil-controlled/interactive although we never implemented it that way).
 
