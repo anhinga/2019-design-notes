@@ -30,7 +30,9 @@ This is obviously too flexible for taking nice derivatives or for GPU execution.
 
 (**Note**: We now have a nice schema for flattening extended V-values as well: https://github.com/anhinga/2019-design-notes/blob/master/automated-synthesis/flattening-of-v-values.md
 
-This is certainly a strong argument for structuring this around V-values, and not around a class of things.)
+This is certainly a strong argument for structuring this around V-values, and not around a class of things.
+
+And then all standard arguments apply: classes are not language-agnostic, and that's bad (we don't want to be tied to a particular language). V-values provide JSON-like syntax (essentially, nested dictionary-based variant of Lisp syntax), and that is very expressive and allows for all kinds of interesting experiments with software architecture.)
 
 So we might have to say that gradient-based methods and GPU-capable runs would only happen for certain types of networks or subnetworks, and that the completely general runs must stick to derivative-free optimization methods and to CPU not-too-optimized execution, at least for the time being.
 
