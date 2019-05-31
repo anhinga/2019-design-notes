@@ -18,7 +18,7 @@ Here we'll try to sketch how the overall framework of this kind should look (fro
 
 [History.md](History.md) describes own relevant prototypes for neuromorphic dataflow systems with vector-like flows (or their pieces) in recent years. 
 
-For the **Architecture notes (preliminary introduction)** see [Preliminary-architecture-notes.md](Core-architecture-notes.md)
+For the **Architecture notes (preliminary introduction)** see [Preliminary-architecture-notes.md](Preliminary-architecture-notes.md)
 
 ## Core (stage 1)
 
