@@ -28,11 +28,15 @@ So, if we are just talking about stream-based programming (forgetting about the 
 
 This is obviously too flexible for taking nice derivatives or for GPU execution. We had some ideas of inter-rewrite (reshape) between plain V-values and sparse one-dimensional vectors and sparse two-dimensional matrices as necessary, but plain V-values are more structured than this "anything goes, just make it a subclass" way. If one introduces "sufficiently interesting leaves" into V-values (per Section 5.3 of https://arxiv.org/abs/1712.07447 ) then one might lose the ability to take nice derivatives or to execute on GPU as well.
 
+---
+
 (**Note**: We now have a nice schema for flattening extended V-values as well: https://github.com/anhinga/2019-design-notes/blob/master/automated-synthesis/flattening-of-v-values.md
 
 This is certainly a strong argument for structuring this around V-values, and not around a class of things.
 
 And then all standard arguments apply: classes are not language-agnostic, and that's bad (we don't want to be tied to a particular language). V-values provide JSON-like syntax (essentially, nested dictionary-based variant of Lisp syntax), and that is very expressive and allows for all kinds of interesting experiments with software architecture.)
+
+---
 
 So we might have to say that gradient-based methods and GPU-capable runs would only happen for certain types of networks or subnetworks, and that the completely general runs must stick to derivative-free optimization methods and to CPU not-too-optimized execution, at least for the time being.
 
