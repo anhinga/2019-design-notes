@@ -9,3 +9,7 @@ See `interactive-framework` directory
 ## Machine learning aspects
 
 See `automated-synthesis` directory
+
+## Nexus
+
+See `nexus` directory
