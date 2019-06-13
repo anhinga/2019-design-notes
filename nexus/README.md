@@ -1,4 +1,6 @@
-The **nexus of the system** should be an engine which allows comfortable interative experiments and machine learning experiments taking advantage of the current state of machine learning frameworks.
+The **nexus of the system** should be an engine which allows
+  * comfortable interactive experiments;
+  * machine learning experiments taking advantage of the current state of machine learning frameworks.
 
 Mostly, it should be a **standard DMM two-stroke engine** (or, more generallly, a neuromorphic two-stroke engine which might incorporate different temporal and hierarchical scales), shaped around the thoughts covering **flattening and reshaping of V-values**:
 
