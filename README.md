@@ -13,3 +13,7 @@ See `automated-synthesis` directory
 ## Nexus
 
 See `nexus` directory
+
+## Research notes
+
+See `research-notes` directory
