@@ -6,7 +6,7 @@ This is the subdirectory for those fragments (which mostly aim for subsequent ve
 
 ---
 
-## June 2019
+### June 2019
 
 `pdflatex dmm-notes-june-2019.tex` to obtain the PDF.
 
