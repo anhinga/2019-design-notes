@@ -2,7 +2,7 @@
 
 As a side effect of this design process, some more long-term research fragments emerge.
 
-This is the subdirectory for those fragments (which mostly aim further in the future, and not at the version current under development).
+This is the subdirectory for those fragments (which mostly aim further in the future, and not at the version currently under development).
 
 ---
 
