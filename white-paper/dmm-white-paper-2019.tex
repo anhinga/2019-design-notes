@@ -1,0 +1,207 @@
+\documentclass{article}
+
+\usepackage{hyperref}
+
+\baselineskip=15pt minus 1pt
+\overfullrule=0pt
+
+% maximize page usage
+\oddsidemargin 1pt
+\evensidemargin 1pt
+\marginparwidth 30pt % these gain 53pt width
+\topmargin 1pt       % gains 26pt height
+\headheight 1pt      % gains 11pt height
+\headsep 1pt         % gains 24pt height
+%\footheight 12 pt % cannot be changed as number must fit
+\footskip 24pt       % gains 6pt height
+\textheight % 528 + 26 + 11 + 24 + 6 + 90 for luck
+            685pt
+\textwidth % 360 + 53 + 47 for luck
+           480pt
+% end of page layout changes
+
+\begin{document}
+
+\renewcommand{\abstractname}{\vspace{-\baselineskip}}
+
+\renewcommand\contentsname{\vspace{-\baselineskip}}
+
+
+\begin{center}
+
+{\bf Dataflow Matrix Machines: a White Paper}
+                                   
+
+
+
+\vspace{0.1in}
+Michael A. Bukatin
+
+
+\vspace{0.085in}
+November 30, 2019
+
+\end{center}
+
+
+
+\begin{abstract}
+
+{\bf Dataflow matrix machines} form a {\bf novel class of
+neural machines} with remarkable properties.
+They combine {\bf general-purpose programming powers of stream-oriented
+architectures} such as traditional dataflow programming and
+more novel functional reactive programming with {\bf good machine learning
+properties of conventional neural networks.}
+
+\end{abstract}
+
+\begin{center}
+\line(1,0){250}
+\end{center}
+
+\section{Future potential}
+
+The future potential and promise of dataflow matrix machines (DMMs) is high.
+
+\begin{itemize}
+
+  \item {\bf Program synthesis.} The task of synthesis of dataflow matrix machines
+should be more tractable than conventional program synthesis. When one works with DMMs, the task of
+{\em learning program sketches} is reformulated as {\em neural architecture search},
+and converting a program sketch to a full program should be done by
+conventional methods of neural net training. The dimension of the network and the dimension
+of data are decoupled, so one has an option to synthesize compact neural machines
+under this approach, if so desired.
+
+\vspace{0.1in}
+Dataflow matrix machines combine
+
+  \begin{itemize}
+      \item aspects of {\em program synthesis} setup\\ (compact, human-readable programs);
+      \item aspects of {\em program inference} setup\\ (continuous models defined by matrices).
+  \end{itemize}
+
+\vspace{0.1in}
+\item {\bf Self-modification and learning to learn.} Using neural networks for metalearning
+is always non-trivial. In particular, dimension mismatch, namely the number of neuron outputs 
+being much smaller than the number of network weights,
+means that a neural network
+can only modify itself in a highly constrained manner. Dataflow matrix machines address
+this problem and have {\bf powerful and flexible self-modification facilities}.
+
+\vspace{0.1in}
+Therefore, a dataflow matrix machine can be equipped with a variety of primitives
+performing self-modifications, and it can fruitfully learn various linear combinations and
+compositions involving those primitives.
+
+\vspace{0.1in}
+Self-modification facilities of dataflow matrix machines are not limited to the weight
+changes for the existing connections in the network. The available primitives allow to
+modify the network topology as well. For example, primitives allowing the network
+to control its own fractal-like growth by the means of cloning its own subnetworks
+are available.
+
+\vspace{0.1in}
+So, this is a very promising architecture not only for methods of learning to learn
+better in a traditional sense, but also for methods of learning to perform
+neural architecture search better. 
+
+\vspace{0.1in}
+A dataflow matrix machine can comfortably host
+an evolving population of other DMMs inside itself, so it is
+an excellent environment for neuroevolution experiments and, in particular,
+for the experiments aiming to learn to evolve better (or to evolve to evolve better).
+
+\vspace{0.1in}
+\item {\bf Neuro-symbolic architectures and hierarchical learning.} The availability of 
+{\bf flexible tensors} based on {\em tree-shaped indices} makes this architecture
+quite promising for neuro-symbolic methods and for hierarchies.
+
+\vspace{0.1in}
+\item {\bf Visual animation based on composition of unit generators.} DMMs 
+generalize digital audio synthesis via composition of unit generators, but work
+with more general streams than just streams of numbers. The old-fashioned
+analog video synthesizers also work in the style of composition of unit
+generators. Modern computer graphics tends to be imperative, oriented towards
+specific data flows implemented inside GPUs, and to require the software practitioners to
+focus on manual optimizations. The promise of doing animations via functional reactive
+programming is to focus again on semantically meaningful
+data flows, and to leave the hardware-oriented optimization to the underlying system.
+Dataflow matrix machines aspire to make this promise a reality.
+
+
+\end{itemize}
+
+\section{How they work}
+
+The essence of neural model of computations is that linear and non-linear computations are interleaved. Hence, the natural
+degree of generality for neuromorphic computations is to work not with streams of numbers, but with arbitrary streams
+supporting the notion of linear combination of several streams ({\bf linear streams}).
+
+
+\vspace{0.1in}
+\noindent
+Dataflow matrix machines (DMMs) form a novel class of neural machines, which work with wide variety
+of {\bf linear streams} instead of streams of numbers. The neurons have
+arbitrary arity (arity of a neuron can be fixed or variable). Of particular note are
+self-referential facilities: ability to change weights, topology, and the size of the active part of the network dynamically, on the fly,
+and the reflection capability (the ability of the network to analyze its current configuration).
+
+\vspace{0.1in}
+\noindent
+There are various kinds of linear streams. They include streams of numbers, sparse vectors and sparse tensors (both of
+finite and infinite dimension), streams of functions and distributions. We found streams of V-values
+({\bf flexible tensors} based on tree-shaped indices) to be of particular use.
+
+\vspace{0.1in}
+\noindent
+A single dataflow matrix machine can process a large variety of different kinds of linear streams, or
+it can be based on a single kind of linear streams, sufficiently expressive for a given class of situations.
+
+\section{What have been done}
+
+During the last seven years, I have been leading the efforts which resulted in
+the discovery and study of dataflow matrix machines. The work was done by
+several research collaborations between members of American and British 
+academic communities. We published three papers and a number of preprints and
+research notes, and released several related open source research-grade
+implementations. During this period, I gave about 20 presentations on 
+related topics at various venues in the United States, Canada, and Europe.
+
+\vspace{0.1in}
+\noindent
+We investigated a variety of programming patterns and primitives in
+dataflow matrix machines and performed experiments with various uses of self-referential
+facilities.
+
+\vspace{0.1in}
+\noindent
+We are continuing our efforts towards the next generation of DMMs 
+and towards future programming and machine learning
+technologies based on DMMs.
+
+\vspace{0.1in}
+\noindent
+{\bf Dataflow Matrix Machines links:}
+
+\vspace{0.1in}
+GitHub Pages: \href{https://anhinga.github.io/}{\tt https://anhinga.github.io}
+
+\vspace{0.1in}
+Open source implementation (Clojure): \href{https://github.com/jsa-aerial/DMM}{\tt https://github.com/jsa-aerial/DMM}
+
+\vspace{0.1in}
+One-page overview: \href{https://www.cs.brandeis.edu/~bukatin/dataflow-matrix-machines-2016.pdf}{\tt https://www.cs.brandeis.edu/$\sim$bukatin/dataflow-matrix-machines-2016.pdf}
+
+\vspace{0.1in}
+Reference slide deck: \href{https://researcher.watson.ibm.com/researcher/files/us-lmandel/aisys18-bukatin.pdf}{\footnotesize\tt https://researcher.watson.ibm.com/researcher/files/us-lmandel/aisys18-bukatin.pdf}
+
+\vspace{0.1in}
+Reference paper: \href{https://arxiv.org/abs/1712.07447}{\tt https://arxiv.org/abs/1712.07447}
+
+
+
+
+
+\end{document}

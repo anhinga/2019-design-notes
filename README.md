@@ -17,3 +17,7 @@ See `nexus` directory
 ## Research notes
 
 See `research-notes` directory
+
+## White paper
+
+See `white-paper` directory
