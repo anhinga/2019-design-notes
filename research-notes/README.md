@@ -21,6 +21,8 @@ Abstract:
   * We also note that thinking about the non-linear part of the network as a shader might be quite fruitful. 
   * It was observed before that compositional pattern-producing networks have shader architecture.
 
+---
+
 ### December 2019
 
 Title:
