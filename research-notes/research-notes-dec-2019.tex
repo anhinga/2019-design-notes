@@ -1,0 +1,184 @@
+\documentclass{article}
+
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{amssymb}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\usepackage{verbatim}
+\usepackage{endnotes}
+\usepackage{epigraph}
+
+\definecolor{myblue}{rgb}{0, 0, 0.9}
+
+\newcommand{\msblue}[1]{{\color{myblue} #1}}
+
+\setlength{\epigraphrule}{0pt}
+
+
+\title{DMMs for VR and worldmaking;\\ a modest proposal on effects and qualia}
+\author{Michael Bukatin}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We look at visual animation and making virtual worlds via composition of unit generators.
+
+We also make a modest proposal for a way to incorporate real-world effects and even qualia into the dataflow matrix machines framework.
+\end{abstract}
+
+\epigraph{From digital audio synthesis to visual animation via composition of unit generators;}
+
+\vspace{-0.3in}
+\epigraph{From visual animation to VR and making of virtual worlds via composition of unit generators;}
+
+\vspace{-0.3in}
+\epigraph{From making virtual worlds to general purpose dataflow programming via composition of unit generators.}
+
+
+\vspace{-0.1in}
+\section*{Introduction}
+
+This is a very informal research note. I hope it will be of use to us in 2020.
+
+\section{Unit generators with linear streams}
+
+Instead of streams of numbers we consider streams of vectors, streams of matrices, and even streams of V-values
+(flexible tensors based on tree-shaped indices). 
+
+Currently, a typical framework for visual effects contains a completely intuitive non-programmer interface for end users,
+and, on the other hand, engineers write the internals for such a framework and its plugins in some hard-core low-level way (e.g. using some highly optimized C++/CUDA combimation).
+
+Thankfully, there are some intermediate capabilities, e.g. one often encounters {\bf node editors used to program shaders} inside visual frameworks.
+The essence of our proposal is to be able to use "intermediate capabilities" for more than just shaders.
+
+In particular, in digital audio synthesis one can use a node editor to live code the sound via {\bf a composition of unit generators}.
+
+We would like to have the same "intermediate capabilities" in visual animation and, generally, in generation of VR and virtual worlds. 
+We believe that moving from streams of numbers to {\bf linear streams} (arbitrary streams admitting the notion of linear combination
+of several streams) should give us enough expressive power to do just that.
+
+Namely, we expect to be able to create animations, 3D-animations, and more rich multimodal interactive worlds by
+composing unit generators which transform linear streams.
+
+\section{Real time vs async}
+
+Stream-based architectures can be async (and then they often tend to be lazy), or they can be ``real time"
+(which typically means trying to keep up with some kind of ``global clock" and often defining computations in terms
+of ``ticks" of that ``global clock").
+
+Since we come from audio synthesis, visual animations, and such, we tend to focus on ``real time", synchronous
+flavor of stream-based programming (which also corresponds well to the approach of artificial neural networks
+\footnote{For artificial neural networks, and also for dataflow matrix machines, it is important to be able to
+take linear combinations of incoming streams; this is easy to do, if next elements of those streams arrive in sync, but
+requires rather intricate treatment otherwise (e.g. leaky-integrate-and-fire of spiking models).}).
+
+In this sense, among "high brow" functional programming frameworks of this kind, one of our favorite examples is Yampa \footnote{See \href{https://wiki.haskell.org/Yampa}{\tt https://wiki.haskell.org/Yampa} and links in that page.}.
+It is based on the notion of stream (which it calls {\tt signal}) as a function from {\tt time}. It is sometimes criticized for not being lazy enough
+(too many things are recomputed for the mostly static parts of the interface waiting on rare events), but that's a separate
+optimization issue\footnote{Optimization issues here are very important; the key one is how to compile our nice user-friendly composition of unit generators into effective GPU-using code; hopefully, some of the preliminary work done in
+\href{https://github.com/anhinga/2019-design-notes}{\tt https://github.com/anhinga/2019-design-notes} will be applicable.}.  
+
+Together with explorations by members of DMM community in recent years, work done by members of Yampa community
+provides support for a conjecture that this architecture is expressive enough for, basically, any kind of
+real-time programming (including async events and elaborate data structures).
+
+\section{A modest proposal on effects and qualia}
+
+This section is motivated, in part, by my recent reading of a variety of texts around ``hard problem of
+consciousness". My common observation (which is so far applicable to a wide variety of texts I've seen) is that
+while they vigorously disagree with each other on the nature of first-person experience, they make
+absolutely zero progress towards understanding and describing the nature of qualia. One can look for
+example at drastically different approaches by, say, Donald Hoffman and Chrstof Koch, and there is
+exactly one thing they have in common: zero progress towards description of qualia, zero connection between
+their elaborate math and something which might start to incorporate models reflecting the particular
+richness of particular qualia.
+
+So, I want to try something else. I want to abstract away from all those different approaches to the
+fundamental nature of the first-person experience, and I want to take some steps towards incorporating
+qualia into our models, so we can at least start working with them. 
+
+But I want to start with something simpler, with ``effects". Sometimes, ``purely computational models
+of consciousness" seem to claim that qualia would emerge ``on their own" in the context of appropriate
+computations. It is difficult to imagine how this can be, when it is not true even for something as
+simple as ``effects". Indeed, we can have very elaborate computer graphics computations, but unless
+there is a connection between the machine performing those computations and something that, for example,
+lights up small color lights on a computer monitor, no visible ``effects" would emerge. Moreover, it is
+easy to connect the wires incorrectly, so that ``red" in our computational model would activate
+small green lights, and vice versa (speaking of the ``inverted spectrum" problem). So, if one wants
+``effects", e.g. visual effects in the physical world, one needs to incorporate elements actually
+lighting some physical color lights in the physical world (or spraying some paint
+in the physical world) into one's computational schemas.
+
+\subsection{Qualia}
+
+I think we should apply the same approach to qualia. We should start including elements representing
+qualia in our models. We would need to set aside the question of how those elements are made.
+But we would need to talk about some properties of qualia, otherwise all this would not even start
+to make sense.
+
+{\bf {\em Conjecture.} Given several qualia, in the same modality, or in different modalities, it is usually
+possible to ``combine them with coefficients".}
+
+In the same modality, effects like color mixing might be involved, and with different modalities, usually
+only a limited amount of attention is available, and only attended components are reflected as 
+perceivable qualia. Just like with effects, not all coefficients need to lead to representable results
+(e.g. too high or negative color values might not make sense, depending on your model,
+or some normalization procedure might need to be applied to make sure that the results
+make sense). But, just like with effects, we would expect that at least combinations with
+positive coefficients which sum to 1 do make sense.
+
+So, we assume that the {\bf qualia, in some sense, are like linear streams of DMMs}. We don't necessarily
+impose a particular structure on those spaces. E.g. what is the dimension of the space of subjective
+colors? This depends quite a bit on whether a particular person wants to state that brown is
+a kind of dark orange (then one is probably heading towards three-dimensional space of
+subjective colors), or if, contrary to that, one wants to state that brown is a very particular sensation,
+quite independent from orange (then one is probably heading towards a high-dimensional or,
+perhaps, even infinitely-dimensional space of subjective colors).
+
+So, with effects, one can merge DMMs and physical reality, and with qualia as linear streams
+one can merge DMMs and the world of perception (at least for the purpose of thought
+experiments). Of course, given that an artistically perceiving agent (e.g. human or animal) is likely to end up
+being a part of a DMM contour, this model is starting to describe something real.
+
+We are not making judgement on whether it is possible to have qualia-making contours
+inside a digital machine, or what should be mechanisms which would make such contours possible.
+we just treat qualia-making contours as black boxes, abstracting from whether these black boxes
+are biological, whether they might have purely digital implementation, etc. In case of doubts,
+it always helps to ask similar questions about effects (e.g. can a computer just light up the monitor
+without physical connection, by ``telepathy"? Perhaps, although most likely this would involve some
+wireless protocol and some electromagnetic waves to transmit, so we would call it ``pseudo-telepathy").
+
+We just assume: there is something which can control physical lights, there is also something
+which produces qualia feelings in a person. We don't know what that something that
+produces qualia feelings in a person is, but we assume that we can (perhaps in a non-unique way)
+combine several qualia with coefficients (if there is no ``canonical way" to do so, we just pick some
+way to combine). It turns out that this modest proposal is sufficient to allow us to talk about qualia
+in the context of DMM models, and to consider investigating this subject both in theory
+and in experiments\footnote{Some applied situations
+including the relevant safety concerns were studied by us in May-June 2012, and the notes made
+during that study are, at the moment, available here: \href{https://dmm.dreamwidth.org/19302.html}{\tt https://dmm.dreamwidth.org/19302.html}.}.
+
+\section*{Acknowledgments} 
+
+There are so many crucial influences here during the period of last 20+ years, that I can
+barely start acknowledging them all. They come from communities related to audio-visual arts
+and DJ/VJ effects, communities formed around studies of the ``hard problem of consciousness", 
+communities around functional programming, and around artificial and biological neural networks,
+and, of course, from people who were involved in dataflow matrix machines at various stages.
+
+
+
+
+
+
+
+
+%\theendnotes
+
+%\tableofcontents
+
+
+\end{document}
