@@ -21,3 +21,14 @@ Abstract:
   * We also note that thinking about the non-linear part of the network as a shader might be quite fruitful. 
   * It was observed before that compositional pattern-producing networks have shader architecture.
 
+### December 2019
+
+Title:
+
+_DMMs for VR and worldmaking; a modest proposal on effects and qualia_
+
+---
+
+Abstract:
+  * We look at visual animation and making virtual worlds via composition of unit generators.
+  * We also make a modest proposal for a way to incorporate real-world effects and even qualia into the dataflow matrix machines framework.
