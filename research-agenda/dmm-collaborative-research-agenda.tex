@@ -40,7 +40,7 @@ Michael A. Bukatin
 
 
 \vspace{0.085in}
-December 22, 2019
+December 22-23, 2019
 
 \end{center}
 
@@ -135,7 +135,7 @@ counting words in a given text which uses only a few neurons
 Similarly, by considering streams of V-values  (flexible tensors based on tree-shaped indices) and embedding
 of lists into trees, one can build a similarly compact dataflow matrix machine
 accumulating a list of asynchronous incoming events
-(e.g. mouse clicks, see Section 6.3 of the reference paper above). 
+(e.g. mouse clicks, see Section 6.3 of the DMM reference paper, \href{https://arxiv.org/abs/1712.07447}{\tt https://arxiv.org/abs/1712.07447}). 
 
 The task of synthesis of dataflow matrix machines
 should be more tractable than conventional program synthesis. When one works with DMMs, the task of
@@ -185,8 +185,33 @@ In our software experiments, we used self-modification facilities to
   \begin{itemize}
      \item produce controlled wave patterns in the network matrix (see Appendix B.2 of our LearnAut 2017 paper, \href{https://arxiv.org/abs/1706.00648}{\tt https://arxiv.org/abs/1706.00648});
      \item create randomly initialized self-referential DMMs which generated interesting emerging behaviors (see Section 1.2 of our 11-2018 technical report, \href{https://www.cs.brandeis.edu/~bukatin/dmm-notes-2018.pdf}{\tt dmm-notes-2018.pdf});
-     \item edit a running network on the fly by sending it requests to edit itself (in particular, this enables {\bf livecoding}, see Section 1.1 of our 11-2018 technical report, \href{https://www.cs.brandeis.edu/~bukatin/dmm-notes-2018.pdf}{\tt dmm-notes-2018.pdf}).
+     \item edit a running network on the fly by sending it requests to edit itself (in particular, this enables {\bf livecoding}, but this is also quite open-ended, since it enables a population of networks, telling each to modify themselves; of course, the receiving network doesn't have to follow the incoming instruction to self-modify blindly, although in the simplest case it would do so; see Section 1.1 of our 11-2018 technical report, \href{https://www.cs.brandeis.edu/~bukatin/dmm-notes-2018.pdf}{\tt dmm-notes-2018.pdf}).
   \end{itemize}
+
+\section{Dynamical systems based on DMMs and emerging properties}
+
+The dynamical systems based on dataflow
+matrix machines exhibit a variety of interesting emerging properties. We conducted two series of experimental studies which yielded interesting emerging properties. These experiments were implemented in Processing programming language.
+
+The first series of experiments was conducted in August 2015 and involved continuous cellular automata (see Section 4 of the preprint introducing the class of neural machines which we later started to call DMMs, \href{https://arxiv.org/abs/1601.01050}{\tt https://arxiv.org/abs/1601.01050}). The following videos show some of the emerging patterns we observed:
+
+\begin{itemize}
+   \item \href{https://youtu.be/KZHQxdZUlSU}{\tt https://youtu.be/KZHQxdZUlSU}
+   \item \href{https://youtu.be/rulK7l4jS-o}{\tt https://youtu.be/rulK7l4jS-o}
+   \item \href{https://youtu.be/-pFil1\_GEA4}{\tt https://youtu.be/-pFil1\_GEA4}
+\end{itemize}
+
+The second series of experiments was conducted in 2016-2018 and involved ``pure lightweight dataflow machines" (see Section 1.2 of our 11-2018 technical report, 
+\href{https://www.cs.brandeis.edu/~bukatin/dmm-notes-2018.pdf}{\tt dmm-notes-2018.pdf}).
+We observed, for example, the following emerging patterns:
+
+\begin{itemize}
+   \item \href{https://youtu.be/\_mZVVU8x3bs}{\tt https://youtu.be/\_mZVVU8x3bs} - emerging sleep-wake patterns
+   \item \href{https://youtu.be/CKVwsQEMNjY}{\tt https://youtu.be/CKVwsQEMNjY} - emerging oscillations
+\end{itemize}
+
+This is a fertile setup to discover new emerging patterns of behavior, to study those patterns mathematically,
+and, perhaps, to eventually design novel emerging patterns of behavior.
 
 \section*{This is work in progress, to be continued}
 
