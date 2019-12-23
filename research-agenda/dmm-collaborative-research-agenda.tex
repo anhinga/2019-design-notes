@@ -1,0 +1,220 @@
+\documentclass{article}
+
+\usepackage{hyperref}
+\usepackage{comment}
+
+\baselineskip=15pt minus 1pt
+\overfullrule=0pt
+
+% maximize page usage
+\oddsidemargin 1pt
+\evensidemargin 1pt
+\marginparwidth 30pt % these gain 53pt width
+\topmargin 1pt       % gains 26pt height
+\headheight 1pt      % gains 11pt height
+\headsep 1pt         % gains 24pt height
+%\footheight 12 pt % cannot be changed as number must fit
+\footskip 24pt       % gains 6pt height
+\textheight % 528 + 26 + 11 + 24 + 6 + 90 for luck
+            685pt
+\textwidth % 360 + 53 + 47 for luck
+           480pt
+% end of page layout changes
+
+\begin{document}
+
+\renewcommand{\abstractname}{\vspace{-\baselineskip}}
+
+\renewcommand\contentsname{\vspace{-\baselineskip}}
+
+
+\begin{center}
+
+{\bf Dataflow Matrix Machines:  a Collaborative Research Agenda}
+                                   
+
+
+
+\vspace{0.1in}
+Michael A. Bukatin
+
+
+\vspace{0.085in}
+December 22, 2019
+
+\end{center}
+
+
+
+\begin{abstract}
+
+{\bf Dataflow matrix machines} form a quintessential interdisciplinary field. 
+They emerged as a class of neural machines expressive enough to also serve
+as a viable programming framework. Their historical roots are in the synthesis of domains
+for denotational semantics and vector spaces. There are deep connections between
+vector semantics of programming languages and fuzzy and multivalued logic of
+partial inconsistency. The dynamical systems based on dataflow
+matrix machines exhibit a variety of interesting emerging properties. 
+
+As a programming framework, dataflow matrix machines have affinity with
+synchronous versions of dataflow and functional reactive programming.
+They generalize digital audio synthesis based on composition of unit generators
+(transformers of streams of numbers), thus providing potential to generalize
+the style of programming via composition of unit generators to
+visual animations, virtual reality, and eventually to general-purpose
+programming.
+
+A class of spaces of V-values (flexible tensors based on tree-shaped indices) is
+extremely convenient for a variety of purposes. V-values allow to bring conventional data structures
+into the neural context, are convenient for hierarchies, are used to allow
+variadic activation functions, and have good potential for use in creating and training
+flexible neural interfaces between pre-existing software systems.
+
+When considered as neural machines, dataflow matrix machines are remarkable for
+their strong self-referential facilities, allowing a neural network of this class to analyze
+and modify its current configuration on the fly. They form a natural framework for modular
+neural networks. This suggest a strong potential for their use in learning to learn,
+and also in neuroevolutionary methods.
+
+Dataflow matrix machines were discovered and studied by a series of small-scale academic
+research collaborations. To unlock their full interdisciplinary potential, it would be necessary
+to generate a wider interest in this class of programmable neural machines.
+
+\end{abstract}
+
+\begin{center}
+\line(1,0){250}
+\end{center}
+
+In this note, I provide a bit more details and key references for some of the promising
+interdisciplinary research directions I see at the moment. I hope readers from various
+fields would find this of interest.
+
+\section{Background: how they work}
+
+The essence of neural model of computations is that linear and non-linear computations are interleaved. Hence, the natural
+degree of generality for neuromorphic computations is to work not with streams of numbers, but with arbitrary streams
+supporting the notion of linear combination of several streams ({\bf linear streams}).
+
+Dataflow matrix machines (DMMs) form a novel class of neural machines, which work with wide variety
+of {\bf linear streams} instead of streams of numbers. The neurons have
+arbitrary arity (arity of a neuron can be fixed or variable). Of particular note are
+self-referential facilities: ability to change weights, topology, and the size of the active part of the network dynamically, on the fly,
+and the reflection capability (the ability of the network to analyze its current configuration).
+
+There are various kinds of linear streams. They include streams of numbers, sparse vectors and sparse tensors (both of
+finite and infinite dimension), streams of functions and distributions. We found streams of V-values
+({\bf flexible tensors} based on tree-shaped indices) to be of particular use.
+
+A single dataflow matrix machine can process a large variety of different kinds of linear streams, or
+it can be based on a single kind of linear streams, sufficiently expressive for a given class of situations.
+
+This allows us to obtain 
+neural machines which combine {\bf general-purpose programming powers of stream-oriented
+architectures} such as traditional dataflow programming and
+more novel functional reactive programming with {\bf good machine learning
+properties of conventional neural networks.}
+
+\vspace{0.1in}
+\noindent
+{\bf Dataflow Matrix Machines resources:}
+
+Reference paper: \href{https://arxiv.org/abs/1712.07447}{\tt https://arxiv.org/abs/1712.07447}
+
+Reference slide deck: \href{https://researcher.watson.ibm.com/researcher/files/us-lmandel/aisys18-bukatin.pdf}{\footnotesize\tt https://researcher.watson.ibm.com/researcher/files/us-lmandel/aisys18-bukatin.pdf}
+
+GitHub Pages: \href{https://anhinga.github.io/}{\tt https://anhinga.github.io}
+
+Open source implementation (Clojure): \href{https://github.com/jsa-aerial/DMM}{\tt https://github.com/jsa-aerial/DMM}
+
+\section{Conventional programming and program synthesis.} The dimension of the network and the dimension
+of data are decoupled, so compact neural machines for solving conventional programming problems are available.
+For example, by considering streams of maps from words to numbers, one can build a dataflow matrix machine
+counting words in a given text which uses only a few neurons 
+(Section 3 of \href{https://arxiv.org/abs/1606.09470}{\tt https://arxiv.org/abs/1606.09470}).
+Similarly, by considering streams of V-values  (flexible tensors based on tree-shaped indices) and embedding
+of lists into trees, one can build a similarly compact dataflow matrix machine
+accumulating a list of asynchronous incoming events
+(e.g. mouse clicks, see Section 6.3 of the reference paper above). 
+
+The task of synthesis of dataflow matrix machines
+should be more tractable than conventional program synthesis. When one works with DMMs, the task of
+{\em learning program sketches} is reformulated as {\em neural architecture search},
+and converting a program sketch to a full program should be done by
+conventional methods of neural net training. 
+
+\vspace{0.1in}
+\noindent
+Dataflow matrix machines should potentially allow to combine
+
+  \begin{itemize}
+      \item aspects of {\em program synthesis} setup\\ (compact, human-readable programs);
+      \item aspects of {\em program inference} setup\\ (continuous models defined by matrices).
+  \end{itemize}
+
+\section{Self-modification, learning to learn, and neuroevolution.} Using neural networks for metalearning
+is always non-trivial. In particular, dimension mismatch, namely the number of neuron outputs 
+being much smaller than the number of network weights,
+means that a neural network
+can only modify itself in a highly constrained manner. Dataflow matrix machines address
+this problem and have {\bf powerful and flexible self-modification facilities}.
+
+Therefore, a dataflow matrix machine can be equipped with a variety of primitives
+which perform self-modifications, and it can fruitfully learn various linear combinations and
+compositions involving those primitives.
+
+Self-modification facilities of dataflow matrix machines are not limited to the weight
+changes for the existing connections in the network. The available primitives allow to
+modify the network topology as well. For example, primitives allowing the network
+to control its own fractal-like growth by the means of cloning its own subnetworks
+are available.
+
+Therefore, this is a very promising architecture not only for methods of learning to learn
+better in a traditional sense, but also for methods of learning to perform
+neural architecture search better. 
+
+A dataflow matrix machine can comfortably host
+an evolving population of other DMMs inside itself, so it is
+an excellent environment for neuroevolution experiments and, in particular,
+for the experiments aiming to learn to evolve better (or to evolve to evolve better).
+
+\vspace{0.1in}
+\noindent
+In our software experiments, we used self-modification facilities to
+
+  \begin{itemize}
+     \item produce controlled wave patterns in the network matrix (see Appendix B.2 of our LearnAut 2017 paper, \href{https://arxiv.org/abs/1706.00648}{\tt https://arxiv.org/abs/1706.00648});
+     \item create randomly initialized self-referential DMMs which generated interesting emerging behaviors (see Section 1.2 of our 11-2018 technical report, \href{https://www.cs.brandeis.edu/~bukatin/dmm-notes-2018.pdf}{\tt dmm-notes-2018.pdf});
+     \item edit a running network on the fly by sending it requests to edit itself (in particular, this enables {\bf livecoding}, see Section 1.1 of our 11-2018 technical report, \href{https://www.cs.brandeis.edu/~bukatin/dmm-notes-2018.pdf}{\tt dmm-notes-2018.pdf}).
+  \end{itemize}
+
+\section*{This is work in progress, to be continued}
+
+\begin{comment}
+\section{Bits and pieces}
+
+{\bf Neuro-symbolic architectures and hierarchical learning.} The availability of 
+{\bf flexible tensors} based on {\em tree-shaped indices} makes this architecture
+quite promising for neuro-symbolic methods and for hierarchies.
+
+{\bf Visual animation based on composition of unit generators.} DMMs 
+generalize digital audio synthesis via composition of unit generators, but work
+with more general streams than just streams of numbers. The old-fashioned
+analog video synthesizers also work in the style of composition of unit
+generators. Modern computer graphics tends to be imperative, oriented towards
+specific data flows implemented inside GPUs, and to require the software practitioners to
+focus on manual optimizations. The promise of doing animations via functional reactive
+programming is to focus again on semantically meaningful
+data flows, and to leave the hardware-oriented optimization to the underlying system.
+Dataflow matrix machines aspire to make this promise a reality.
+
+We investigated a variety of programming patterns and primitives in
+dataflow matrix machines and performed experiments with various uses of self-referential
+facilities.
+\end{comment}
+
+
+
+
+
+\end{document}
