@@ -260,6 +260,25 @@ which are under development at a number of organizations.
 This is an important and potentially very fruitful area of collaboration between specialists in parallel and efficient implementation
 of the algorithms and people focusing on flexible neural architectures.
 
+\section{Links to fuzzy and multivalued logic of
+partial inconsistency}
+
+The historical roots of dataflow matrix machines are in the synthesis of domains
+for denotational semantics and vector spaces. This synthesis told us that it was likely
+that programming with linear streams can be made powerful enough to be used for general-purpose programming.
+
+The key element of that synthesis is the ability to handle partial contradictions (that is, to handle
+overdefined elements in addition to partially defined elements). For interval arithmetic,  
+this corresponds to introduction of pseudosegments $[a, b]$ with the contradictory property that
+$b < a$ (the first known discovery of those overdefined interval numbers is by Mieczyslaw Warmus in his ``Calculus of Approximations", 1956). For probability theory, this corresponds to allowing negative values of probabilities,
+which originally comes from physics (such as quasiprobabilities by Eugene Wigner in 1932, and then phase-space formulation
+of quantum mechanics independently developed by José Moyal and Hilbrand Groenewold in 1940-es).
+
+For the detailed overview of that material linking vector semantics with partial inconsistency, see Section 4 (and, in particular, Sections 4.2-4.4, and Sections 4.7-4.12) of our GCAI 2015 paper, ``Linear Models of Computation and Program Learning", \href{https://easychair.org/publications/paper/Q4lW}{\tt https://easychair.org/publications/paper/Q4lW}. Because in addition to Lawvere duality between fuzzy orders and quasi-metrics, a similar duality exists between multivalued equalities and partial metrics ( \href{https://www.cs.brandeis.edu/~bukatin/distances_and_equalities.html}{\tt https://www.cs.brandeis.edu/$\sim$bukatin/distances\_and\_equalities.html}), here we have both partial metrics and fuzzy multivalued predicates taking values in Warmus' partially inconsistent interval numbers.
+
+There are interesting possible connections to be explored between this material and probabilistic logic networks by Goertzel et al. (2008).
+
+
 \section*{This is work in progress, to be continued}
 
 \begin{comment}
