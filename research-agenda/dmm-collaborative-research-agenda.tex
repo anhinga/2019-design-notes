@@ -40,7 +40,7 @@ Michael A. Bukatin
 
 
 \vspace{0.085in}
-December 22-23, 2019
+December 22-24, 2019
 
 \end{center}
 
@@ -185,7 +185,7 @@ In our software experiments, we used self-modification facilities to
   \begin{itemize}
      \item produce controlled wave patterns in the network matrix (see Appendix B.2 of our LearnAut 2017 paper, \href{https://arxiv.org/abs/1706.00648}{\tt https://arxiv.org/abs/1706.00648});
      \item create randomly initialized self-referential DMMs which generated interesting emerging behaviors (see Section 1.2 of our 11-2018 technical report, \href{https://www.cs.brandeis.edu/~bukatin/dmm-notes-2018.pdf}{\tt dmm-notes-2018.pdf});
-     \item edit a running network on the fly by sending it requests to edit itself (in particular, this enables {\bf livecoding}, but this is also quite open-ended, since it enables a population of networks, telling each to modify themselves; of course, the receiving network doesn't have to follow the incoming instruction to self-modify blindly, although in the simplest case it would do so; see Section 1.1 of our 11-2018 technical report, \href{https://www.cs.brandeis.edu/~bukatin/dmm-notes-2018.pdf}{\tt dmm-notes-2018.pdf}).
+     \item edit a running network on the fly by sending it requests to edit itself (in particular, this enables {\bf livecoding}, but this is also quite open-ended, since it enables a population of networks to tell each other to modify themselves; of course, the receiving network doesn't have to follow an incoming instruction to self-modify blindly, although in the most simple-minded case it would do so; see Section 1.1 of our 11-2018 technical report, \href{https://www.cs.brandeis.edu/~bukatin/dmm-notes-2018.pdf}{\tt dmm-notes-2018.pdf}).
   \end{itemize}
 
 \section{Dynamical systems based on DMMs and emerging properties}
@@ -212,6 +212,31 @@ We observed, for example, the following emerging patterns:
 
 This is a fertile setup to discover new emerging patterns of behavior, to study those patterns mathematically,
 and, perhaps, to eventually design novel emerging patterns of behavior.
+
+\section{Synchronous vs async, and artificial vs biological neural nets}
+
+Like all neural machines, DMMs tend to be synchronous, because it is much easier to combine
+several streams with coefficients in the synchronous model of computations. As such, they have affinity with
+synchronous dataflow and functional reactive languages and libraries, such as, for example,
+{\tt Lucid Synchrone} programming language and {\tt Yampa} (a Haskell library).
+
+By default, DMMs tend to provide extreme sparseness in connectivity patterns (``sparseness in space"),
+but not sparseness in time. 
+
+At the same time, biological networks are asynchronous, providing sparseness in time, just like
+general dataflow programming tends to be asynchronous and general functional reactive programming,
+in particular, tends to provide sparseness in time.
+
+At the same time, biological neural networks tend to be equipped with various synchronization mechanisms.
+E.g. on the lower level, mechanisms such as, for example, {\bf leaky integrate-and-fire} enable combining
+asynchronous inputs with coefficients. On higher levels, there are various mechanisms synchronizing firing times
+of different neurons (see, for example, research by the group led by Nancy Kopell at Boston University starting from
+around 2005 for various mathematical models of those mechanisms).
+
+Reconciling synchronous and asynchronous models of computation, and, in particular, borrowing from
+what we know about biological neural nets and bringing it into realm of artificial neural machines is
+an important direction. Just like all ``sparseness in time", it is also quite relevant to the field of low energy
+neural computations, which keeps growing in importance.
 
 \section*{This is work in progress, to be continued}
 
