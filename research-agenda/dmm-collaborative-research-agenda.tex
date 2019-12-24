@@ -40,7 +40,7 @@ Michael A. Bukatin
 
 
 \vspace{0.085in}
-December 22-24, 2019
+December 22-24, 2019 (in progress)
 
 \end{center}
 
@@ -213,7 +213,7 @@ We observed, for example, the following emerging patterns:
 This is a fertile setup to discover new emerging patterns of behavior, to study those patterns mathematically,
 and, perhaps, to eventually design novel emerging patterns of behavior.
 
-\section{Synchronous vs async, and artificial vs biological neural nets}
+\section{Synchronous vs. async, and artificial vs. biological neural nets}
 
 Like all neural machines, DMMs tend to be synchronous, because it is much easier to combine
 several streams with coefficients in the synchronous model of computations. As such, they have affinity with
@@ -237,6 +237,28 @@ Reconciling synchronous and asynchronous models of computation, and, in particul
 what we know about biological neural nets and bringing it into realm of artificial neural machines is
 an important direction. Just like all ``sparseness in time", it is also quite relevant to the field of low energy
 neural computations, which keeps growing in importance.
+
+\section{Flexibility vs. parallelization and optimization} 
+
+Extreme flexibility of DMMs is provided by the use of V-values (flexible tensors with tree-shaped indices, 
+see Section 3 the DMM reference paper, \href{https://arxiv.org/abs/1712.07447}{\tt https://arxiv.org/abs/1712.07447}, for
+the theory of V-values),
+sparse connections, and the ability of the network to self-reconfigure on the fly.
+
+Obviously, there is a lot of tension between that and the ability to provide an efficient implementation,
+and especially with the ability to provide parallelized, GPU-friendly, and batching-friendly implementation.
+
+The task of doing so is not impossible, but can be quite involved (see, for example, TensorFlow {\tt Fold},
+a library for working with dynamic computation graphs). See Appendix F of \href{https://arxiv.org/abs/1610.00831}{\tt https://arxiv.org/abs/1610.00831} for further discussion.
+
+We started the initial design work towards reconciling tree-shaped tensor indices and GPUs/TPUs in
+\href{https://github.com/anhinga/2019-design-notes}{\tt https://github.com/anhinga/2019-design-notes}
+repository. It is also promising to consider more flexible parallel architectures than GPUs, such
+as, for example, architectures based on FPGAs, and also commercial flexible alternatives to GPUs,
+which are under development at a number of organizations. 
+
+This is an important and potentially very fruitful area of collaboration between specialists in parallel and efficient implementation
+of the algorithms and people focusing on flexible neural architectures.
 
 \section*{This is work in progress, to be continued}
 
