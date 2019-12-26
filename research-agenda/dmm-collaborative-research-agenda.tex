@@ -281,34 +281,33 @@ There are interesting possible connections to be explored between this material 
 \section{Real-time functional programming: visual animation and virtual reality via composition
 of unit generators}
 
-[...]
+Dataflow matrix machines generalize digital audio synthesis based on composition of unit generators
+(transformers of streams of numbers). Real-time digital audio synthesis and real-time generation
+of computer animation and virtual reality form very natural classes of soft real-time programming.
 
-\section*{This is work in progress, this text is to be further modified}
+Moving from streams of numbers to more general linear streams, such as streams of V-values,
+should provide sufficient expressive power to program 2D and 3D visual animation based on
+composition of unit generators understood as transformers of linear streams. We explored
+this approach in various pre-DMM prototypes, and later in DMM systems, both for fixed
+computational graphs and for computational graphs, dynamically changing on the fly,
+see, for example, Sections 3-5 of \href{https://arxiv.org/abs/1601.00713}{\tt https://arxiv.org/abs/1601.00713} and associated videos
+\begin{itemize}
+   \item \href{https://youtu.be/fEWcg_A5UZc}{\tt https://youtu.be/fEWcg\_A5UZc} - fixed dataflow graph
+   \item \href{https://youtu.be/gL2L7otx-qc}{\tt https://youtu.be/gL2L7otx-qc} - dataflow graph changing on the fly 
+\end{itemize}
+for initial pre-DMM work in this direction.
 
-\begin{comment}
-\section{Bits and pieces}
-
-{\bf Neuro-symbolic architectures and hierarchical learning.} The availability of 
-{\bf flexible tensors} based on {\em tree-shaped indices} makes this architecture
-quite promising for neuro-symbolic methods and for hierarchies.
-
-{\bf Visual animation based on composition of unit generators.} DMMs 
-generalize digital audio synthesis via composition of unit generators, but work
-with more general streams than just streams of numbers. The old-fashioned
+Note that the old-fashioned
 analog video synthesizers also work in the style of composition of unit
 generators. Modern computer graphics tends to be imperative, oriented towards
 specific data flows implemented inside GPUs, and to require the software practitioners to
 focus on manual optimizations. The promise of doing animations via functional reactive
 programming is to focus again on semantically meaningful
 data flows, and to leave the hardware-oriented optimization to the underlying system.
-Dataflow matrix machines aspire to make this promise a reality.
-
-We investigated a variety of programming patterns and primitives in
-dataflow matrix machines and performed experiments with various uses of self-referential
-facilities.
-\end{comment}
+We hope to make this promise a reality.
 
 
+\section*{This is work in progress, this text is to be further modified}
 
 
 
