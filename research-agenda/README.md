@@ -1,6 +1,6 @@
 Interdisciplinary and collaborative research agenda
 
-The PDF file is at
+A subsequent version of this text is posted at
 
 https://www.cs.brandeis.edu/~bukatin/dmm_next.html
 
