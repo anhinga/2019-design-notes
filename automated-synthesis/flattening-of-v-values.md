@@ -29,3 +29,9 @@ For V-values with extended leaf structure (Section 5.3 of https://arxiv.org/abs/
 ---
 
 This seems to be the right direction, in terms of starting to do machine learning applications.
+
+---
+
+**Note (Dec 15, 2020):** See https://github.com/scikit-hep/awkward-1.0 "Manipulate JSON-like data with NumPy-like idioms".
+
+This might be another possible solution to this problem.
