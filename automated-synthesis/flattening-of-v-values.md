@@ -34,4 +34,6 @@ This seems to be the right direction, in terms of starting to do machine learnin
 
 **Note (Dec 15, 2020):** See https://github.com/scikit-hep/awkward-1.0 "Manipulate JSON-like data with NumPy-like idioms".
 
-This might be another possible solution to this problem.
+This might be another possible solution to this problem instead of flattening.
+
+(Of course, another way is simply to use Julia Flux and Zygote and avoid flattening.)
