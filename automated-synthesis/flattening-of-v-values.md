@@ -46,13 +46,13 @@ https://en.wikipedia.org/wiki/Perfect_hash_function (with or without order prese
 
 https://github.com/eddieantonio/perfection
 
-and the associated very long "mini-book" 1997 article by Czech et al, "Perfect Hashing"
+and the associated very long "mini-book" 1997 Theor.Comp.Sci. open access article by Czech et al, "Perfect Hashing":
 
 https://www.sciencedirect.com/science/article/pii/S0304397596001466
 
-one should pay attention to ref [33] or [31] and pages 58, 67, 99, and immediately following those in that "mini-book"
+One should pay attention to ref [33] or [31] and pages 58, 67, 99, and immediately following those in that "mini-book".
 
-in particular this one looks good (we should benchmark it vs. naive ways):
+In particular this Python program looks good (we should benchmark it vs. naive ways):
 
 https://github.com/eddieantonio/perfection/blob/master/perfection/czech.py
 
