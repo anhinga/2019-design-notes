@@ -37,3 +37,22 @@ This seems to be the right direction, in terms of starting to do machine learnin
 This might be another possible solution to this problem instead of flattening.
 
 (Of course, another way is simply to use Julia Flux and Zygote and avoid flattening.)
+
+---
+
+**Note (Dec 21, 2020):** Adding missing info on search for _python dynamic perfect hashing_ and related things (from Feb 24, 2019):
+
+https://en.wikipedia.org/wiki/Perfect_hash_function (with or without order preservation)
+
+https://github.com/eddieantonio/perfection
+
+and the associated very long "mini-book" 1997 article by Czech et al, "Perfect Hashing"
+
+https://www.sciencedirect.com/science/article/pii/S0304397596001466
+
+one should pay attention to ref [33] or [31] and pages 58, 67, 99, and immediately following those in that "mini-book"
+
+in particular this one looks good (we should benchmark it vs. naive ways):
+
+https://github.com/eddieantonio/perfection/blob/master/perfection/czech.py
+
