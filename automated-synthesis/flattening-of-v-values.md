@@ -40,7 +40,7 @@ This might be another possible solution to this problem instead of flattening.
 
 ---
 
-**Note (Dec 21, 2020):** Adding missing info on search for _python dynamic perfect hashing_ and related things (from Feb 24, 2019):
+**Note (Dec 20, 2020):** Adding missing info on search for _python dynamic perfect hashing_ and related things (from Feb 24, 2019):
 
 https://en.wikipedia.org/wiki/Perfect_hash_function (with or without order preservation)
 
