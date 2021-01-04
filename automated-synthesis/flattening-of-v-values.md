@@ -40,6 +40,14 @@ This might be another possible solution to this problem instead of flattening.
 
 ---
 
+See also **pytree** protocol of JAX:
+
+https://jax.readthedocs.io/en/latest/pytrees.html
+
+https://jax.readthedocs.io/en/latest/jax.tree_util.html
+
+---
+
 **Note (Dec 21, 2020):** Adding missing info on search for _python dynamic perfect hashing_ and related things (from Feb 24, 2019):
 
 https://en.wikipedia.org/wiki/Perfect_hash_function (with or without order preservation)
@@ -56,3 +64,4 @@ In particular this Python program looks good (we should benchmark it vs. naive w
 
 https://github.com/eddieantonio/perfection/blob/master/perfection/czech.py
 
+"Use the Czech et al. method for generating **minimal perfect hashes for strings**" ("A minimal perfect hash function is a perfect hash function that maps n keys to n consecutive integers – usually the numbers from 0 to n − 1 or from 1 to n")
